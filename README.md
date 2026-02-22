@@ -1,58 +1,70 @@
-# 👋 Hi, I'm John Sirmon
+# John Sirmon
 
-🚨 Escalation Engineer @ Microsoft | 🧠 AI Agent Architect | 🎨 Shark Sculptor  
-🔍 Obsessed with troubleshooting, Data, Logs, Cloud Computing and lately context engineering
-🌐 [sirmon.ai](https://sirmon.ai) | 🎥 [theSharkArtist.com](https://theSharkArtist.com)
+Escalation Engineer at Microsoft focused on AI-enabled support systems, incident response, and telemetry-driven troubleshooting.
 
----
+I work at the intersection of support engineering, context engineering, and applied AI. My focus is reducing time-to-resolution for complex production incidents by combining operational rigor with practical LLM workflows.
 
-## 🧠 What I Do
-
-With 20+ years at Microsoft and some time at Oracle Cloud Infrastructure, startups, I specialize in **mission-critical escalations**, **AI development**, **data, logs, traces**, and **exceeding the speed of relevancy**. I'm currently building tools that bridge the gap between support engineering and generative AI using intelligent memory, Kusto analytics, and real-time ingestion telemetry.
+[sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com)
 
 ---
 
-## 🔭 Current Projects
+## Executive Summary
 
-- `Support Context Protocol (SCP)` — In-memory, structured case management for triage agents  
-- `clearcouncil` — Civic meeting summarization and vote extraction using LLM + RAG  
-- `localops-tools` — Scripts and tools for AMA diagnostics, ingestion validation, and  workflows  
-- 🧠 **Azure Monitor Copilot v1** — Creator of the original RAG-based AMA copilot using internal troubleshooting guides and markdown
-
----
-
-## 📈 Career Highlights
-
-- 👨‍💻 **Creator of Azure Monitor Copilot v1**: First working RAG-based copilot at Microsoft for AMA troubleshooting using TSGs and internal guidance  
-- 4x Microsoft roles across Support, Engineering, PM, and Escalation  
-- Co-creator: Analysis Services Maestros Program  
-- Lead architect on 1st Pivotal Cloud Foundry deployment in Azure China  
-- Frequent speaker on Big Data, Power BI, Cloud AI Architecture  
-- Author of numerous whitepapers on Tabular Models, NUMA affinity, SSAS performance
+- More than 20 years of engineering and escalation experience across Microsoft, Oracle Cloud Infrastructure, and startup environments.
+- Builder of AI-assisted support workflows that connect case context, Kusto analytics, and internal guidance to accelerate triage and mitigation.
+- Operator across support, engineering, and product functions with a track record of shipping high-urgency solutions under production pressure.
 
 ---
 
-## 🦈 Shark Art on the Side
+## Selected Work (Last 24 Months)
 
-When I'm not wrangling CRIs or orchestrating AI workflows, I'm carving giant sharks with chainsaws. No, really.  
-🎥 [theSharkArtist.com](https://theSharkArtist.com) | 🎨 Midjourney + Airbrush + GIMP + Wood
-
----
-
-## 🛠️ Languages & Tools
-
-`RUST` | `Python` | `Kusto` | `C#` | `Azure ICM` | `Node.js` | `FAISS` | `LangChain` | `CPs`  
-`GIMP` | `Midjourney` | `Inkscape` | `Mig welding`
-
----
-
-## 📬 Reach Out
-
-📫 johnsirmon [at] hotmail [dot] com  
-🌐 [sirmon.ai](https://sirmon.ai)  
-🐙 github.com/johnsirmon  
-🎬 [theSharkArtist.com](https://theSharkArtist.com)
+- `Support Context Protocol (SCP)`
+	- Built a structured in-memory case context model for triage agents to improve continuity across long-running incident investigations.
+	- Focused on faster handoffs and higher signal retention during high-severity escalations.
+- `clearcouncil`
+	- Designed an LLM + RAG pipeline for civic meeting summarization and vote extraction.
+	- Improved readability of long-form public meeting records and streamlined downstream analysis.
+- `Azure Monitor Copilot v1`
+	- Created an early RAG-based copilot for Azure Monitor Agent troubleshooting using internal runbooks and markdown guidance.
+	- Established a practical pattern for AI-assisted support in diagnostics-heavy workflows.
 
 ---
 
-_“My secret weapon has always been understanding the data.”_
+## Career Highlights
+
+- Created Azure Monitor Copilot v1, an early working RAG copilot for Azure Monitor Agent troubleshooting at Microsoft.
+- Served in four Microsoft roles spanning support, engineering, product management, and escalation.
+- Co-created the Analysis Services Maestros Program.
+- Led architecture for an early Pivotal Cloud Foundry deployment in Azure China.
+- Presented on big data, Power BI, and cloud AI architecture.
+- Authored technical whitepapers on tabular models, NUMA affinity, and SSAS performance.
+
+---
+
+## Languages and Tools
+
+`Rust` | `Python` | `Kusto` | `C#` | `Azure ICM` | `Node.js` | `FAISS` | `LangChain`
+
+`GIMP` | `Midjourney` | `Inkscape` | `MIG welding`
+
+---
+
+## Shark Art
+
+Outside of engineering, I create large-scale shark sculptures and mixed-media shark art.
+
+[theSharkArtist.com](https://theSharkArtist.com)
+
+---
+
+## Contact
+
+johnsirmon [at] hotmail [dot] com
+
+[sirmon.ai](https://sirmon.ai)
+
+github.com/johnsirmon
+
+---
+
+_"My secret weapon has always been understanding the data."_
