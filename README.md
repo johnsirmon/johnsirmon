@@ -4,7 +4,7 @@ Escalation Engineer at Microsoft focused on AI-enabled support systems, incident
 
 I work at the intersection of support engineering, context engineering, and applied AI — reducing time-to-resolution for complex production incidents by combining operational rigor with practical LLM workflows.
 
-[sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com)
+[sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com) | [Shark Artist: Great White Theme (VS Marketplace)](https://marketplace.visualstudio.com/items/shark-labs.shark-labs-great-white-theme)
 
 [![VS Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/shark-labs.shark-labs-great-white-theme?label=VS%20Marketplace%20Installs)](https://marketplace.visualstudio.com/items?itemName=shark-labs.shark-labs-great-white-theme)
 
@@ -19,6 +19,10 @@ I work at the intersection of support engineering, context engineering, and appl
 ---
 
 ## Selected Work (Last 24 Months)
+
+- **[shark-artist-great-white-theme](https://github.com/johnsirmon/shark-artist-great-white-theme)** — VS Code Theme
+  - [Marketplace listing](https://marketplace.visualstudio.com/items/shark-labs.shark-labs-great-white-theme). Contrast-verified VS Code color theme with six variants (Dark, Light, Storm, Frost, High Contrast Dark, High Contrast Light), semantic highlighting, and broad workbench color coverage.
+  - Color theory approach: hierarchy is driven by luminance before hue, cool ocean tones are used for general syntax, and warm coral/amber accents are reserved for diagnostics and warnings so attention cues stay clear.
 
 - **[scp](https://github.com/johnsirmon/scp)** — Support Context Protocol
   - CLI tool and MCP server for support engineers. Ingests case data from clipboard or file, strips PII via AES-256 encrypted local vault, stores cases in a searchable JSON database, and exports AI-ready context to GitHub Copilot, Claude, or any MCP-compatible tool.
