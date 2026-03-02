@@ -1,8 +1,10 @@
 # John Sirmon
 
-Escalation Engineer at Microsoft focused on AI-enabled support systems, incident response, and telemetry-driven troubleshooting.
+Escalation Engineer at Microsoft focused on agentic support systems, production incident response, and telemetry-informed troubleshooting.
 
-I work at the intersection of support engineering, context engineering, and applied AI — reducing time-to-resolution for complex production incidents by combining operational rigor with practical LLM workflows.
+I work at the intersection of support engineering, cloud platform development, and applied AI -- reducing time-to-resolution for complex production incidents through agentic workflows, MCP-integrated tooling, and a deep understanding of customers and human behavior under stress (escalations)
+
+...troubleshooting, fixing things, and creativity
 
 [sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com) | [Shark Artist: Great White Theme (VS Marketplace)](https://marketplace.visualstudio.com/items/shark-labs.shark-labs-great-white-theme)
 
@@ -65,6 +67,7 @@ I work at the intersection of support engineering, context engineering, and appl
 ## Career Highlights
 
 - Created Azure Monitor Copilot v1, an early working RAG copilot for Azure Monitor Agent troubleshooting at Microsoft.
+- Served on an early Microsoft cloud adoption team working with large enterprise customers as cloud development scaled into mainstream production workloads.
 - Served in four Microsoft roles spanning support, engineering, product management, and escalation.
 - Co-created the Analysis Services Maestros Program.
 - Led architecture for an early Pivotal Cloud Foundry deployment in Azure China.
