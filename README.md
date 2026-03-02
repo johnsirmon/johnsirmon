@@ -2,7 +2,7 @@
 
 Escalation Engineer at Microsoft focused on AI-enabled support systems, incident response, and telemetry-driven troubleshooting.
 
-I work at the intersection of support engineering, context engineering, and applied AI. My focus is reducing time-to-resolution for complex production incidents by combining operational rigor with practical LLM workflows.
+I work at the intersection of support engineering, context engineering, and applied AI — reducing time-to-resolution for complex production incidents by combining operational rigor with practical LLM workflows.
 
 [sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com)
 
@@ -10,40 +10,51 @@ I work at the intersection of support engineering, context engineering, and appl
 
 ---
 
-## Executive Summary
+## Summary
 
-- More than 20 years of engineering and escalation experience across Microsoft, Oracle Cloud Infrastructure, and startup environments.
-- Builder of AI-assisted support tooling that connects case context, Kusto analytics, and internal guidance to accelerate triage and mitigation.
-- Operator across support, engineering, and product functions with a track record of shipping high-urgency solutions under production pressure.
+- 20+ years of engineering and escalation experience across Microsoft, Oracle Cloud Infrastructure, and startup environments.
+- Builds AI-assisted support tooling that connects case context, Kusto analytics, and internal guidance to accelerate triage and mitigation.
+- Has operated across support, engineering, and product functions with a track record of shipping under production pressure.
 
 ---
 
 ## Selected Work (Last 24 Months)
 
-- [scp](https://github.com/johnsirmon/scp) - Support Context Protocol
-	- CLI tool and MCP server for support engineers that ingests case data, strips PII into an AES-256 local vault, stores searchable context, and exports AI-ready case summaries.
-- [daily-ai-docs](https://github.com/johnsirmon/daily-ai-docs) - AI documentation library
-	- Python-based updater that tracks model and API changes from official sources and generates daily reference updates.
-- [clearcouncil](https://github.com/johnsirmon/clearcouncil) - Civic meeting summarizer
-	- LLM + RAG pipeline for collecting, embedding, and summarizing local government meeting documents into searchable output.
-- [forscan_tools](https://github.com/johnsirmon/forscan_tools) - FORScan diagnostics toolkit
-	- Safety-first Python tools for ABT parsing, DTC analysis, and change planning with rollback guidance.
-- [cricut-stencil-maker](https://github.com/johnsirmon/cricut-stencil-maker) - Cricut stencil tool
-	- C#/WinUI desktop app that converts images into Design Space-compatible SVG stencils.
-- [inkscape-pathbinder](https://github.com/johnsirmon/inkscape-pathbinder) - Inkscape stencil extension
-	- Python extension that inserts structural bridges into stencil paths for more reliable cutting.
-- [shark-artist-great-white-theme](https://github.com/johnsirmon/shark-artist-great-white-theme) - VS Code theme
-	- Ocean-inspired VS Code theme set with WCAG-aware contrast targets and multiple variants for day/night workflows.
-- Azure Monitor Copilot v1 (internal)
-	- Early RAG-based copilot for Azure Monitor Agent troubleshooting built from internal runbooks and markdown guidance.
-	- Established a reusable pattern for AI-assisted support in diagnostics-heavy workflows.
+- **[scp](https://github.com/johnsirmon/scp)** — Support Context Protocol
+  - CLI tool and MCP server for support engineers. Ingests case data from clipboard or file, strips PII via AES-256 encrypted local vault, stores cases in a searchable JSON database, and exports AI-ready context to GitHub Copilot, Claude, or any MCP-compatible tool.
+  - Supports security profiles (`dev`, `trusted`, `enterprise`, `strict`), memory-only mode for locked-down environments, and cross-platform clipboard monitoring (Windows, macOS, Linux).
 
----
+- **[forscan_tools](https://github.com/johnsirmon/forscan_tools)** — FORScan Diagnostic Toolkit
+  - Safety-first Python CLI for Ford/Lincoln/Mercury/Mazda vehicle diagnostics using FORScan.
+  - Parses ABT module configuration files, decodes DTCs, generates pre-checked change plans with rollback steps, and produces trust reports with official-source citations.
 
-## Automation and Tooling
+- **[cricut-stencil-maker](https://github.com/johnsirmon/cricut-stencil-maker)** — Cricut Stencil Tool
+  - Windows desktop application (C#/WinUI) that converts images into Design Space-compatible SVG stencils.
+  - Handles image processing, path generation, and stencil-safe output for Cricut cutting machines.
 
-- I build practical tools across support engineering, diagnostics, and developer workflows, with a focus on reliability, context continuity, and operator usability.
-- Recent work includes MCP-enabled workflows, CLI utilities, and repeatable update automation for AI-heavy environments.
+- **[daily-ai-docs](https://github.com/johnsirmon/daily-ai-docs)** — AI Documentation Library
+  - Auto-updating reference library for OpenAI and Anthropic models. Monitors official docs, API changelogs, and release blogs daily using a Python-based document updater with AI-powered change detection.
+  - Includes prompt reference guides, platform comparison matrices, and a daily workflow briefing generator.
+
+- **[inkscape-pathbinder](https://github.com/johnsirmon/inkscape-pathbinder)** — Inkscape Stencil Extension
+  - Python extension for Inkscape that auto-inserts structural bridges into stencil paths so interior shapes do not fall out when cut.
+  - Supports configurable bridge width and spacing, multi-layer designs, and complexity analysis.
+
+- **[pyExtractHEIC](https://github.com/johnsirmon/pyExtractHEIC)** — iCloud HEIC Converter
+  - Python CLI tool that extracts HEIC photos from iCloud zip exports and batch-converts them to PNG.
+  - Handles multi-archive iCloud exports, temporary extraction cleanup, and verbose logging.
+
+- **[ai-dev-workstation](https://github.com/johnsirmon/ai-dev-workstation)** — AI Agent Dev Setup
+  - Opinionated setup guide and automation scripts for AI agent development on Windows 11 with WSL 2, VS Code Insiders, GitHub Copilot agent mode, and MCP server configuration.
+  - Includes a weekly automation pipeline for tracking framework versions and community signals.
+
+- **[clearcouncil](https://github.com/johnsirmon/clearcouncil)** — Civic Meeting Summarizer
+  - LLM + RAG pipeline for collecting, embedding, and summarizing local government meeting records (minutes, agendas, votes).
+  - Reduces long-form public documents to structured, searchable output.
+
+- **Azure Monitor Copilot v1** *(internal)*
+  - Early RAG-based copilot for Azure Monitor Agent troubleshooting, built from internal runbooks and markdown guidance.
+  - Established a reusable pattern for AI-assisted support in diagnostics-heavy workflows.
 
 ---
 
@@ -60,7 +71,7 @@ I work at the intersection of support engineering, context engineering, and appl
 
 ## Languages and Tools
 
-`Python` | `C#` | `Node.js` | `Rust` | `Kusto` | `MCP` | `FAISS` | `LangChain`
+`Rust` | `Python` | `Kusto` | `C#` | `Azure ICM` | `Node.js` | `FAISS` | `LangChain`
 
 `Azure ICM` | `GIMP` | `Inkscape` | `Midjourney` | `MIG welding`
 
