@@ -8,7 +8,7 @@ I work at the intersection of support engineering, cloud platform development, a
 
 [sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com) | [Shark Artist: Great White Theme (VS Marketplace)](https://marketplace.visualstudio.com/items/shark-labs.shark-labs-great-white-theme)
 
-[![VS Marketplace Installs](https://vsmarketplacebadges.dev/installs-short/shark-labs.shark-labs-great-white-theme.svg)](https://marketplace.visualstudio.com/items?itemName=shark-labs.shark-labs-great-white-theme)
+[![VS Marketplace Installs](badges/vscode-installs.svg)](https://marketplace.visualstudio.com/items?itemName=shark-labs.shark-labs-great-white-theme)
 
 ---
 
