@@ -6,9 +6,7 @@ I work at the intersection of support engineering, cloud platform development, a
 
 ...troubleshooting, fixing things, and creativity
 
-[sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com) | [Shark Artist: Great White Theme (VS Marketplace)](https://marketplace.visualstudio.com/items/shark-labs.shark-labs-great-white-theme)
-
-[![VS Marketplace Installs](badges/vscode-installs.svg)](https://marketplace.visualstudio.com/items?itemName=shark-labs.shark-labs-great-white-theme)
+[sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com) | [VS Code extensions](https://marketplace.visualstudio.com/publishers/shark-labs)
 
 ---
 
@@ -20,47 +18,75 @@ I work at the intersection of support engineering, cloud platform development, a
 
 ---
 
-## Selected Work (Last 24 Months)
+## Published VS Code Extensions
 
-- **[shark-artist-great-white-theme](https://github.com/johnsirmon/shark-artist-great-white-theme)** — VS Code Theme
-  - [Marketplace listing](https://marketplace.visualstudio.com/items/shark-labs.shark-labs-great-white-theme). Contrast-verified VS Code color theme with six variants (Dark, Light, Storm, Frost, High Contrast Dark, High Contrast Light), semantic highlighting, and broad workbench color coverage.
-  - Color theory approach: hierarchy is driven by luminance before hue, cool ocean tones are used for general syntax, and warm coral/amber accents are reserved for diagnostics and warnings so attention cues stay clear.
+Two themes from **The Shark Artist**. Source repositories are private; both extensions are publicly available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/publishers/shark-labs).
 
-- **[scp](https://github.com/johnsirmon/scp)** — Support Context Protocol
-  - CLI tool and MCP server for support engineers. Ingests case data from clipboard or file, strips PII via AES-256 encrypted local vault, stores cases in a searchable JSON database, and exports AI-ready context to GitHub Copilot, Claude, or any MCP-compatible tool.
-  - Supports security profiles (`dev`, `trusted`, `enterprise`, `strict`), memory-only mode for locked-down environments, and cross-platform clipboard monitoring (Windows, macOS, Linux).
+### [Bloodloss](https://marketplace.visualstudio.com/items?itemName=shark-labs.bloodloss) — New
 
-- **[forscan_tools](https://github.com/johnsirmon/forscan_tools)** — FORScan Diagnostic Toolkit
-  - Safety-first Python CLI for Ford/Lincoln/Mercury/Mazda vehicle diagnostics using FORScan.
-  - Parses ABT module configuration files, decodes DTCs, generates pre-checked change plans with rollback steps, and produces trust reports with official-source citations.
+[![Bloodloss installs](badges/bloodloss-installs.svg)](https://marketplace.visualstudio.com/items?itemName=shark-labs.bloodloss)
 
-- **[cricut-stencil-maker](https://github.com/johnsirmon/cricut-stencil-maker)** — Cricut Stencil Tool
-  - Windows desktop application (C#/WinUI) that converts images into Design Space-compatible SVG stencils.
-  - Handles image processing, path generation, and stencil-safe output for Cricut cutting machines.
+Near-black surfaces, bone-white text, and crimson accents with a survival-horror identity. Includes semantic highlighting and original, optional file icons. A static theme: no runtime code, telemetry, or automatic settings changes.
 
-- **[daily-ai-docs](https://github.com/johnsirmon/daily-ai-docs)** — AI Documentation Library
-  - Auto-updating reference library for OpenAI and Anthropic models. Monitors official docs, API changelogs, and release blogs daily using a Python-based document updater with AI-powered change detection.
-  - Includes prompt reference guides, platform comparison matrices, and a daily workflow briefing generator.
+### [Shark Artist: Great White Theme](https://marketplace.visualstudio.com/items?itemName=shark-labs.shark-labs-great-white-theme)
 
-- **[inkscape-pathbinder](https://github.com/johnsirmon/inkscape-pathbinder)** — Inkscape Stencil Extension
-  - Python extension for Inkscape that auto-inserts structural bridges into stencil paths so interior shapes do not fall out when cut.
-  - Supports configurable bridge width and spacing, multi-layer designs, and complexity analysis.
+[![Great White installs](badges/vscode-installs.svg)](https://marketplace.visualstudio.com/items?itemName=shark-labs.shark-labs-great-white-theme)
 
-- **[pyExtractHEIC](https://github.com/johnsirmon/pyExtractHEIC)** — iCloud HEIC Converter
-  - Python CLI tool that extracts HEIC photos from iCloud zip exports and batch-converts them to PNG.
-  - Handles multi-archive iCloud exports, temporary extraction cleanup, and verbose logging.
+Six ocean-inspired variants: Dark, Light, Storm, Frost, High Contrast Dark, and High Contrast Light. Luminance-led syntax hierarchy, semantic highlighting, and broad workbench coverage.
 
-- **[ai-dev-workstation](https://github.com/johnsirmon/ai-dev-workstation)** — AI Agent Dev Setup
-  - Opinionated setup guide and automation scripts for AI agent development on Windows 11 with WSL 2, VS Code Insiders, GitHub Copilot agent mode, and MCP server configuration.
-  - Includes a weekly automation pipeline for tracking framework versions and community signals.
+<details>
+<summary>About the install badges</summary>
 
-- **[clearcouncil](https://github.com/johnsirmon/clearcouncil)** — Civic Meeting Summarizer
-  - LLM + RAG pipeline for collecting, embedding, and summarizing local government meeting records (minutes, agendas, votes).
-  - Reduces long-form public documents to structured, searchable output.
+The [badge workflow](.github/workflows/update-vsmarketplace-badge.yml) refreshes both counts daily or on manual dispatch using the public Marketplace API. Counts reflect the last successful refresh, not live telemetry. If either lookup fails validation, existing badges remain unchanged and the workflow reports an error.
 
-- **Azure Monitor Copilot v1** *(internal)*
-  - Early RAG-based copilot for Azure Monitor Agent troubleshooting, built from internal runbooks and markdown guidance.
-  - Established a reusable pattern for AI-assisted support in diagnostics-heavy workflows.
+To maintain the badges locally with Node.js 22 or newer:
+
+```sh
+node --test .github/scripts/update-vsmarketplace-badges.test.cjs
+node .github/scripts/update-vsmarketplace-badges.cjs
+```
+
+Extension IDs and labels live in the [shared generator](.github/scripts/update-vsmarketplace-badges.cjs). No Marketplace credentials are required.
+
+</details>
+
+---
+
+## Selected Public Work
+
+Curated September 16, 2026 from public projects updated in 2026.
+
+### Support Engineering and Agent Tooling
+
+- **[AMADiag](https://github.com/johnsirmon/AMADiag)** — Rust CLI and interactive terminal UI for analyzing Azure Monitor Agent troubleshooter bundles. Produces severity-ranked findings, evidence, remediation guidance, and Markdown/JSON reports.
+- **[CPX](https://github.com/johnsirmon/CPX)** — Local-first Rust CLI for preparing support material for AI workflows. Replaces detected sensitive values with typed symbols, keeps mappings in an encrypted local vault, and rehydrates approved output locally. Detection still requires review before sharing.
+- **[Support Context Protocol](https://github.com/johnsirmon/scp)** — Local-first CLI and MCP server for capturing, searching, and preparing support-case context for AI tools, with sensitive-data filtering and encrypted local storage.
+- **[AI Dev Workstation](https://github.com/johnsirmon/ai-dev-workstation)** — Lightweight guide to Windows 11, WSL 2, VS Code, and agent-assisted development. A reference with validation scripts, not a framework or installer bundle.
+
+### Exploration and Creative Tools
+
+- **[AI Realm — explore the live atlas](https://johnsirmon.github.io/ai-realm-site/)** — A 3D fantasy atlas of AI technology. The [public site repository](https://github.com/johnsirmon/ai-realm-site) contains the published build; application source is private.
+- **[Daily AI Developer Brief](https://github.com/johnsirmon/daily-ai-docs)** — Source-backed briefings and a podcast workflow for AI agent developers: what changed, why it matters, and whether to act, watch, or skip.
+- **[FORScan Tools](https://github.com/johnsirmon/forscan_tools)** — Safety-first Python helpers for interpreting vehicle diagnostics and configuration artifacts, with source guidance and rollback-aware planning. Does not write to vehicles directly.
+- **[Cricut Stencil Maker](https://github.com/johnsirmon/cricut-stencil-maker)** — Windows application that turns images into Design Space-compatible SVG stencils, including bridge generation and material presets.
+- **[pyExtractHEIC](https://github.com/johnsirmon/pyExtractHEIC)** — Python CLI for extracting HEIC photos from iCloud zip exports and batch-converting them to PNG.
+
+### Earlier Creative Work
+
+- **[Inkscape PathBinder](https://github.com/johnsirmon/inkscape-pathbinder)** — Python extension that inserts configurable structural bridges into stencil paths so interior shapes stay connected when cut. Last updated in 2025.
+
+**Hermes Agent achievements** — **5 Olympian** · **2 Diamond** · **2 Gold**
+
+<details>
+<summary>Achievement details · September 15, 2026</summary>
+
+- **Olympian:** Model Sommelier, Claude Confidant, Screenshot Hunter, Test Suite Tamer, Toolset Cartographer.
+- **Diamond:** Autonomous Avalanche, Config Surgeon.
+- **Gold:** Plugin Goblin, Subagent Commander.
+
+*Self-reported Hermes activity achievements, counted once per achievement. Not certifications or independently audited productivity metrics.*
+
+</details>
 
 ---
 

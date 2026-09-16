@@ -1,118 +1,47 @@
-name: Update VS Marketplace Badge
+name: Update VS Marketplace Badges
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "17 4 * * *"
+  pull_request:
+    paths:
+      - ".github/scripts/update-vsmarketplace-badges*.cjs"
+      - ".github/workflows/update-vsmarketplace-badge.yml"
+  push:
+    paths:
+      - ".github/scripts/update-vsmarketplace-badges*.cjs"
+      - ".github/workflows/update-vsmarketplace-badge.yml"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  update-badge:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Fetch install count and update badge
-        uses: actions/github-script@v7
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          script: |
-            const fs = require('fs');
-            const extensionId = 'shark-labs.shark-labs-great-white-theme';
-            const uri = 'https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery?api-version=7.2-preview.1';
+          node-version: "22"
+      - name: Test badge generation and failure handling
+        run: node --test .github/scripts/update-vsmarketplace-badges.test.cjs
 
-            const body = {
-              filters: [
-                {
-                  criteria: [
-                    {
-                      filterType: 7,
-                      value: extensionId
-                    }
-                  ],
-                  pageNumber: 1,
-                  pageSize: 1,
-                  sortBy: 0,
-                  sortOrder: 0
-                }
-              ],
-              flags: 914
-            };
-
-            const response = await fetch(uri, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(body)
-            });
-
-            if (!response.ok) {
-              throw new Error(`VS Marketplace query failed: ${response.status} ${response.statusText}`);
-            }
-
-            const data = await response.json();
-            const extension = data?.results?.[0]?.extensions?.[0];
-            const stats = extension?.statistics || [];
-            const installStat = stats.find((s) => s.statisticName === 'install');
-
-            if (!installStat || typeof installStat.value === 'undefined') {
-              throw new Error('Install statistic not found in VS Marketplace response.');
-            }
-
-            const installs = Number(installStat.value);
-            const badge = {
-              schemaVersion: 1,
-              label: 'VS Marketplace Installs',
-              message: String(installs),
-              color: 'blue'
-            };
-
-            const formatNumber = (n) => n.toLocaleString('en-US');
-            const messageText = formatNumber(installs);
-            const labelText = 'VS Marketplace Installs';
-
-            const leftWidth = Math.max(160, Math.round(labelText.length * 6.7 + 20));
-            const rightWidth = Math.max(42, Math.round(messageText.length * 7.0 + 16));
-            const totalWidth = leftWidth + rightWidth;
-            const leftCenter = Math.round(leftWidth / 2);
-            const rightCenter = leftWidth + Math.round(rightWidth / 2);
-
-            const svg = `<?xml version="1.0" encoding="UTF-8"?>
-            <svg xmlns="http://www.w3.org/2000/svg" width="${totalWidth}" height="20" role="img" aria-label="${labelText}: ${messageText}">
-              <title>${labelText}: ${messageText}</title>
-              <linearGradient id="s" x2="0" y2="100%">
-                <stop offset="0" stop-color="#fff" stop-opacity=".7"/>
-                <stop offset=".1" stop-color="#aaa" stop-opacity=".1"/>
-                <stop offset=".9" stop-color="#000" stop-opacity=".3"/>
-                <stop offset="1" stop-color="#000" stop-opacity=".5"/>
-              </linearGradient>
-              <clipPath id="r">
-                <rect width="${totalWidth}" height="20" rx="3" fill="#fff"/>
-              </clipPath>
-              <g clip-path="url(#r)">
-                <rect width="${leftWidth}" height="20" fill="#555"/>
-                <rect x="${leftWidth}" width="${rightWidth}" height="20" fill="#007ec6"/>
-                <rect width="${totalWidth}" height="20" fill="url(#s)"/>
-              </g>
-              <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="11">
-                <text x="${leftCenter}" y="15" fill="#010101" fill-opacity=".3">${labelText}</text>
-                <text x="${leftCenter}" y="14">${labelText}</text>
-                <text x="${rightCenter}" y="15" fill="#010101" fill-opacity=".3">${messageText}</text>
-                <text x="${rightCenter}" y="14">${messageText}</text>
-              </g>
-            </svg>\n`;
-
-            fs.mkdirSync('badges', { recursive: true });
-            fs.writeFileSync('badges/vscode-installs.json', JSON.stringify(badge, null, 2) + '\n');
-            fs.writeFileSync('badges/vscode-installs.svg', svg);
-            core.info(`Updated badge installs: ${installs}`);
-
+  update-badges:
+    needs: test
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Fetch install counts and update badges
+        run: node .github/scripts/update-vsmarketplace-badges.cjs
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update VS Marketplace installs badge"
-          file_pattern: badges/vscode-installs.json badges/vscode-installs.svg
+          commit_message: "chore: update VS Marketplace install badges"
+          file_pattern: badges/vscode-installs.json badges/vscode-installs.svg badges/bloodloss-installs.json badges/bloodloss-installs.svg
