@@ -6,7 +6,7 @@ I build practical tools for triage and mitigation, from agentic support workflow
 
 I like troubleshooting difficult systems, fixing things, and finding room for creativity.
 
-[sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com) | [VS Code extensions](https://marketplace.visualstudio.com/publishers/shark-labs)
+[theSharkArtist.com](https://theSharkArtist.com) | [VS Code extensions](https://marketplace.visualstudio.com/publishers/shark-labs)
 
 ---
 
@@ -141,8 +141,6 @@ Outside of engineering, I create large-scale shark sculptures and mixed-media sh
 ## Contact
 
 johnsirmon [at] hotmail [dot] com
-
-[sirmon.ai](https://sirmon.ai)
 
 github.com/johnsirmon
 
