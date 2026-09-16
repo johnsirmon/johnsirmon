@@ -1,10 +1,10 @@
 # John Sirmon
 
-Escalation Engineer at Microsoft focused on agentic support systems, production incident response, and telemetry-informed troubleshooting.
+Escalation Engineer at Microsoft focused on production incident response, Azure observability, and telemetry-driven troubleshooting.
 
-I work at the intersection of support engineering, cloud platform development, and applied AI -- reducing time-to-resolution for complex production incidents through agentic workflows, MCP-integrated tooling, and a deep understanding of customers and human behavior under stress (escalations)
+I build practical tools for triage and mitigation, from agentic support workflows to local-first, MCP-integrated systems — engineering for the technical and human realities of high-severity production incidents.
 
-...troubleshooting, fixing things, and creativity
+I like troubleshooting difficult systems, fixing things, and finding room for creativity.
 
 [sirmon.ai](https://sirmon.ai) | [theSharkArtist.com](https://theSharkArtist.com) | [VS Code extensions](https://marketplace.visualstudio.com/publishers/shark-labs)
 
@@ -102,11 +102,31 @@ Curated September 16, 2026 from public projects updated in 2026.
 
 ---
 
-## Languages and Tools
+## Technical Stack
 
-`Rust` | `Python` | `Kusto` | `C#` | `Azure ICM` | `Node.js` | `FAISS` | `LangChain`
+### Languages & Query
 
-`Azure ICM` | `GIMP` | `Inkscape` | `Midjourney` | `MIG welding`
+`Rust` · `Python` · `PowerShell` · `TypeScript` · `JavaScript` · `C#` · `KQL / Kusto` · `Bash`
+
+### AI & Agent Systems
+
+`MCP` · `GitHub Copilot` · `Claude Code` · `Codex CLI` · `Hermes Agent` · `RAG` · `Agent Skills & Tooling`
+
+### Cloud, Observability & Support
+
+`Azure` · `Azure Monitor` · `Azure Monitor Agent` · `Log Analytics` · `Incident Response` · `Telemetry Analysis`
+
+### Development
+
+`VS Code` · `Git` · `GitHub` · `GitHub Actions` · `Node.js` · `npm`
+
+### Platforms
+
+`Windows` · `Linux` · `WSL 2` · `Ubuntu`
+
+### Creative & Fabrication
+
+`GIMP` · `Inkscape` · `SVG / Vector Tooling` · `Cricut` · `MIG Welding`
 
 ---
 
