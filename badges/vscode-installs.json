@@ -1,10 +1,6 @@
 {
   "schemaVersion": 1,
-<<<<<<< HEAD
   "label": "Great White installs",
-=======
-  "label": "VS Marketplace Installs",
->>>>>>> f2cb1d0011089e976ac0bebd62ae6400d2cc504a
-  "message": "218",
+  "message": "220",
   "color": "blue"
 }
